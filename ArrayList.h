@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-#include "List.h"
+
 
 template <typename T>
 class ArrayList : public List<T> {
@@ -63,7 +63,7 @@ public:
     }
 
 private:
-    static const int CAPACITY = 20;
+    static constexpr int CAPACITY = 20;
     T* data_[CAPACITY];
     int size_;
 };
