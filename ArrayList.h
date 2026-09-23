@@ -6,7 +6,7 @@
 template <typename T>
 class ArrayList : public List<T> {
 public:
-    ArrayList() : size_(0) {
+    ArrayList() : data_{}, size_(0) {
     }
 
     void addFront(T* value) override {

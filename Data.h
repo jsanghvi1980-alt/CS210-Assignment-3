@@ -1,12 +1,13 @@
 #pragma once
 
-#include <ostream>
+
 #include <string>
+#include <utility>
 
 class Data {
 public:
-    Data(int numID, const std::string& name)
-        : numID_(numID), name_(name) {
+    Data(int numID, std::string name)
+    : numID_(numID), name_(std::move(name)) {
     }
 
     bool operator==(const Data& other) const {

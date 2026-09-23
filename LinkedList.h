@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include "Node.h"
-#include "List.h"
+
 
 template <typename T>
 class LinkedList : public List<T> {
@@ -11,7 +11,7 @@ public:
     }
 
     void addFront(T* value) override {
-        Node<T>* fresh = new Node<T>(value);
+        auto* fresh = new Node<T>(value);
 
         fresh->next = head_;
         head_ = fresh;
