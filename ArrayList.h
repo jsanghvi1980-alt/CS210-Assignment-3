@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-
+#include "List.h"
 
 template <typename T>
 class ArrayList : public List<T> {
